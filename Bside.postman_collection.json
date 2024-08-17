@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "3ffa2ec0-24be-4a88-a4b2-d0bcbeca0cb9",
+		"name": "Bside",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20243806"
+	},
+	"item": [
+		{
+			"name": "Alumno",
+			"item": [
+				{
+					"name": "Obtener Alumnos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Alumno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{java_local}}/alumno/1",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"alumno",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nuevo Alumno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juanito\",\r\n    \"apellido\": \"SinMiedo\",\r\n    \"edad\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{java_local}}/alumno/crear",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"alumno",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Alumno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juanito\",\r\n    \"apellido\": \"SinMiedo\",\r\n    \"edad\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{java_local}}/alumno/actualizar/1",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"alumno",
+								"actualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Alumno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{java_local}}/alumno/borrar/1",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"alumno",
+								"borrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarea",
+			"item": [
+				{
+					"name": "Obtener Tareas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{java_local}}/tarea/todos",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"tarea",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Tarea",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{java_local}}/tarea/1",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"tarea",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Tarea",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"nueva tareita\",\r\n    \"entregado\": false,\r\n    \"alumnoID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{java_local}}/tarea/crear",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"tarea",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"tarea actualizada\",\r\n    \"entregado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{java_local}}/tarea/actualizar/1",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"tarea",
+								"actualizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar estatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{java_local}}/tarea/estatus/1/true",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"tarea",
+								"estatus",
+								"1",
+								"true"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{java_local}}/tarea/borrar/1",
+							"host": [
+								"{{java_local}}"
+							],
+							"path": [
+								"tarea",
+								"borrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
